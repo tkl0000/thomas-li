@@ -28,10 +28,13 @@ interface BlogCardProps {
 function BlogCard({ slug, title, date, description }: BlogCardProps) {
   return (
       <Link href={`/blog/${slug}`}>
-        <div className="">
-          {title}
-          {description}
-          {date}
+        <div className="flex flex-col pl-3 hover:bg-slate-700 transition duration-300 ease-in-out rounded">
+          <div>
+            {title}
+          </div>
+          <div>
+            {date}
+          </div>
         </div>
       </Link>
   )

@@ -1,13 +1,17 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Home() {
   return (
-    <div>
-      <h1>Welcome to My Portfolio</h1>
-      <p>This is my customizable portfolio website!</p>
-      <Link href="/blog">
-        <h2>Check out my blog</h2>
-      </Link>
+    <div className="flex flex-col items-center p-3 gap-3">
+      <Image 
+      src="/images/dog.png"
+      width={500}
+      height={500} 
+      alt="dog"/>
+      <p>
+        Hey
+      </p>
     </div>
   );
 }

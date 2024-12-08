@@ -30,9 +30,8 @@ export default async function Post({ params }: PostProps) {
 
   return (
     <article>
-      <h1>{data.title}</h1>
-      <p>{data.date}</p>
-      <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
+      <h1>{data.title} / {data.date}</h1>
+      <div className="ml-3" dangerouslySetInnerHTML={{ __html: contentHtml }} />
     </article>
   );
 }
