@@ -20,7 +20,7 @@ export async function generateStaticParams() {
 }
 
 export default async function Post({ params }: PostProps) {
-  const { slug } = params;
+  const { slug } = await params;
   const postPath = path.join(process.cwd(), 'posts', `${slug}.md`);
   const fileContents = fs.readFileSync(postPath, 'utf8');
   const { data, content } = matter(fileContents);

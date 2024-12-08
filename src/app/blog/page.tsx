@@ -10,14 +10,29 @@ export default function Blog() {
       <ul>
         {allPostsData.map(({ slug, title, date, description }) => (
           <li key={slug}>
-            <Link href={`/blog/${slug}`}>
-              <h2>{title}</h2>
-              <p>{description}</p>
-              <small>{date}</small>
-            </Link>
+            <BlogCard slug={slug} title={title} date={date} description={description}/>
           </li>
         ))}
       </ul>
     </div>
   );
+}
+
+interface BlogCardProps {
+  slug: string,
+  title: string,
+  description: string,
+  date: string
+}
+
+function BlogCard({ slug, title, date, description }: BlogCardProps) {
+  return (
+      <Link href={`/blog/${slug}`}>
+        <div className="">
+          {title}
+          {description}
+          {date}
+        </div>
+      </Link>
+  )
 }
