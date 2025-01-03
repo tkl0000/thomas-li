@@ -3,11 +3,11 @@ import path from 'path';
 import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
+import gfm from 'remark-gfm'
+import { PageProps } from '../../../../.next/types/app/page';
 
-interface PostProps {
-  params: {
-    slug: string;
-  };
+interface PostProps extends PageProps {
+  params: Promise<{ slug: string }>
 }
 
 export async function generateStaticParams() {
@@ -25,13 +25,13 @@ export default async function Post({ params }: PostProps) {
   const fileContents = fs.readFileSync(postPath, 'utf8');
   const { data, content } = matter(fileContents);
 
-  const processedContent = await remark().use(html).process(content);
+  const processedContent = await remark().use(gfm).use(html).process(content);
   const contentHtml = processedContent.toString();
 
   return (
     <article>
-      <h1>{data.title} / {data.date}</h1>
-      <div className="ml-3" dangerouslySetInnerHTML={{ __html: contentHtml }} />
+      <h1 className='mb-3'>{data.date} / {data.title}</h1>
+      <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
     </article>
   );
 }

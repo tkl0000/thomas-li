@@ -6,7 +6,6 @@ export interface PostData {
   slug: string;
   title: string;
   date: string;
-  description: string;
   content: string;
 }
 
@@ -26,7 +25,6 @@ export function getSortedPostsData(): PostData[] {
       slug,
       title: data.title,
       date: data.date,
-      description: data.description,
       content,
     };
   });

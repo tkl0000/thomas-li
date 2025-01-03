@@ -19,3 +19,9 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin-bottom: 0.75rem;
+}
