@@ -9,7 +9,7 @@ export default function Home() {
       height={500} 
       alt="dog"/>
       <p>
-        Hey
+        "Hey" - Sun Tzu
       </p>
     </div>
   );
