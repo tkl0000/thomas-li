@@ -1,10 +1,10 @@
-import ProjectCard from "@/components/ProjectCard"
-import ProjectCarousel from "@/components/ProjectCarousel"
-import DraggableText from "@/components/DraggableText"
+// import ProjectCard from "@/components/ProjectCard"
+// import ProjectCarousel from "@/components/ProjectCarousel"
+// import DraggableText from "@/components/DraggableText"
 
 const Projects = () => {
 
-    const projectNames = ["Hello", "Bro", "Type", "Meep", "Type", "Sheep", "Type", "Beep", "Okay", "Wtf"]
+    // const projectNames = ["Hello", "Bro", "Type", "Meep", "Type", "Sheep", "Type", "Beep", "Okay", "Wtf"]
 
     return (
         <div className="flex flex-col gap-8 h-full">
