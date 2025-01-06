@@ -1,10 +1,24 @@
 import ProjectCard from "@/components/ProjectCard"
 import ProjectCarousel from "@/components/ProjectCarousel"
+import DraggableText from "@/components/DraggableText"
 
-export default function Projects() {
+const Projects = () => {
+
+    const projectNames = ["Hello", "Bro", "Type", "Meep", "Type", "Sheep", "Type", "Beep", "Okay", "Wtf"]
+
     return (
-        <div className="flex flex-col items-center bg-slate-500 w-full h-full">
-            <ProjectCarousel></ProjectCarousel>
+        <div className="flex flex-col items-center h-full">
+            <DraggableText>
+                {
+                    projectNames.map((item, index) => (
+                        <div key={index}>
+                            {item}
+                        </div>
+                    ))
+                }
+            </DraggableText>
         </div>
     )
 }
+
+export default Projects

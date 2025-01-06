@@ -51,22 +51,25 @@ const ProjectCarousel = () => {
     };
 
     return (
-        <div
-        className="flex gap-4 overflow-x-scroll scrollbar-hide scroll-smooth cursor-grab active:cursor-grabbing"
-        ref={carouselRef}
-        onMouseDown={handleMouseDown}
-        onMouseMove={handleMouseMove}
-        onMouseUp={handleMouseUpOrLeave}
-        onMouseLeave={handleMouseUpOrLeave}
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleMouseUpOrLeave}
-        >
-        {projectNames.map((item, index) => (
-            <div key={index} className="flex-shrink-0 w-48 h-32 bg-gray-200 flex items-center justify-center text-lg font-bold rounded-lg shadow-md">
-            {item}
-            </div>
-        ))}
+        // <div
+        // className="flex gap-4 overflow-x-scroll scrollbar-hide scroll-smooth cursor-grab active:cursor-grabbing"
+        // ref={carouselRef}
+        // onMouseDown={handleMouseDown}
+        // onMouseMove={handleMouseMove}
+        // onMouseUp={handleMouseUpOrLeave}
+        // onMouseLeave={handleMouseUpOrLeave}
+        // onTouchStart={handleTouchStart}
+        // onTouchMove={handleTouchMove}
+        // onTouchEnd={handleMouseUpOrLeave}
+        // >
+        // {projectNames.map((item, index) => (
+        //     <div key={index} className="flex-shrink-0 w-48 h-32 bg-gray-200 flex items-center justify-center text-lg font-bold rounded-lg shadow-md">
+        //     {item}
+        //     </div>
+        // ))}
+        // </div>
+        <div className="flex flex-row">
+
         </div>
     );
 }
