@@ -10,6 +10,9 @@ export default function Reading() {
                     <a href="https://d2l.ai/index.html">D2L</a>
                 </li>
                 <li>
+                    <a href="https://christophm.github.io/interpretable-ml-book/index.html">Interpretable ML</a>
+                </li>
+                <li>
                     Baby Rudin
                 </li>
                 <li>
