@@ -40,6 +40,7 @@ export default function Home() {
           <p>
             High school senior from Maryland interested in Mathematics, Computing, Skateboarding.
           </p>
+          { imageHover ? <p>Above: 1 Year Old Me vs Pasta</p> : <></>}
         </div>
       </div>
     </div>

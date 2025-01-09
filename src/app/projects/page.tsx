@@ -14,7 +14,7 @@ const Projects = () => {
         </div> */}
   
         {/* Projects Section */}
-        <div className="flex flex-col gap-6 w-1/2">
+        <div className="flex flex-col gap-6 w-full lg:w-1/2">
           {/* Quaternions Project */}
           <div className="bg-black  rounded-lg p-6 border border-gray-700 hover:border-slate-50">
             <h1 className="text-2xl font-semibold text-gray-50 mb-4">Quaternions</h1>
