@@ -16,7 +16,7 @@ export default function Reading() {
                     Baby Rudin
                 </li>
                 <li>
-                    Dummit & Foote
+                    Dummit & Foote / Artin's Algebra.. haven't decided which
                 </li>
             </ul>
         </div>
