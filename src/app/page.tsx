@@ -32,7 +32,7 @@ export default function Home() {
       <div>
         {imageHover ? (
           <p>
-          &quot;Hey&quot; - Sun Tzu
+          &quot;Hello Bro&quot; - Sun Tzu
           </p>
         ) : (
           <p>

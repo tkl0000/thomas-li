@@ -85,7 +85,7 @@ const Projects = () => {
           {/* Neural Nudge Project */}
           <div className="bg-black  rounded-lg p-6 border border-gray-700 hover:border-slate-50">
             <h1 className="text-2xl font-semibold text-gray-50 mb-4">Neural Nudge</h1>
-            <p className="text-gray-50">Work in Progress (WIP).</p>
+            <p className="text-gray-50">Re-inventing memorization in the 21st Century; Work in Progress (WIP).</p>
           </div>
         </div>
       </div>
