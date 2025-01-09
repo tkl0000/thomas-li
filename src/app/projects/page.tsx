@@ -4,7 +4,7 @@
 
 const Projects = () => {
     return (
-      <div className="flex flex-col gap-12 p-8 h-full">
+      <div className="flex flex-col items-center pt-4 gap-12 h-full">
         {/* Header */}
         {/* <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-50 mb-4">My Projects</h1>
@@ -14,24 +14,26 @@ const Projects = () => {
         </div> */}
   
         {/* Projects Section */}
-        <div className="flex flex-col gap-12">
+        <div className="flex flex-col gap-6 w-1/2">
           {/* Quaternions Project */}
           <div className="bg-black  rounded-lg p-6 border border-gray-700 hover:border-slate-50">
             <h1 className="text-2xl font-semibold text-gray-50 mb-4">Quaternions</h1>
             <p className="text-gray-50 mb-4">
-              A mathematical approach to visualizing 3D rotations with Python.
+            Inspired by Skateboarding, I began looking into Quaternions, which are a four-dimensional algebra commonly used to model rotations. Here I showcase the simulation tool that I built to model skateboarding rotations using Quaternions, as well as a video I created for the <a href="https://momath.org/strogatzprize/">Steven Strogatz Prize in Math Communication</a>. 
+            Additionally, I presented work related to this topic at MAA MathFest 2024. 
             </p>
             <p className="text-gray-50">
-              <strong>Simulation Source Code: </strong>
-              <a
-                href="https://github.com/tkl0000/quaternion-visualizer"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:underline"
-              >
-                https://github.com/tkl0000/quaternion-visualizer
-              </a>
+              <strong>MAA MathFest Presentation: </strong>
             </p>
+            <iframe
+                src="https://docs.google.com/presentation/d/e/2PACX-1vQeyoW8opsHpIlobWMDC2o60H_DkEDyGcsqTMSt4HjsbYQNyn2PRpuDPpErtRZhJIGHvFIKQ9c9_L5i/embed?start=false&loop=false&delayms=60000"
+                frameBorder="0"
+                width="484"
+                height="392"
+                allowFullScreen
+                className="w-full h-[392px] mt-4"
+                title="Google Presentation"
+              ></iframe>            
             <p className="text-gray-50 mt-4">
               <strong>MoMath Video (Unlisted): </strong>
             </p>
@@ -46,6 +48,17 @@ const Projects = () => {
               allowFullScreen
               className="rounded-lg mt-4"
             ></iframe>
+            <p className="text-gray-50 mt-4">
+              <strong>Simulation Source Code: </strong>
+              <a
+                href="https://github.com/tkl0000/quaternion-visualizer"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                https://github.com/tkl0000/quaternion-visualizer
+              </a>
+            </p>
           </div>
 
           {/* Math Journal Project */}
@@ -67,7 +80,7 @@ const Projects = () => {
           <div className="bg-black  rounded-lg p-6 border border-gray-700 hover:border-slate-50">
             <h1 className="text-2xl font-semibold text-gray-50 mb-4">Tab Logger</h1>
             <p className="text-gray-50 mb-4">
-              A Chrome Extension to track browser activity and export it in a .csv format.
+            Developed a lightweight Chrome extension (“Tab-logger”) using HTML/CSS/JavaScript to automatically track web browsing and search activity; used by undergraduate data-science students and graduate students to quantify students’ metacognitive process during problem-solving
             </p>
             <p className="text-gray-50">
               <strong>Install / Source Code: </strong>

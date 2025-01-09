@@ -1,5 +1,6 @@
 "use client";
 import Image from 'next/image';
+import Link from 'next/link';
 import {useState} from 'react';
 
 export default function Home() {
@@ -7,19 +8,21 @@ export default function Home() {
   const [imageHover, setImageHover] = useState(false);
 
   return (
-    <div className="flex flex-col items-center p-3 gap-3">
+    <div className="flex flex-col items-center gap-3">
       <div
         className="relative h-60 w-80"
         onMouseEnter={() => setImageHover(true)}
         onMouseLeave={() => setImageHover(false)}
       >
         {imageHover ? (
-          <Image
-            src="/images/dog.png"
-            layout="fill"
-            objectFit="contain"
-            alt="dog"
-          />
+          <Link href="https://www.youtube.com/watch?v=kgmEAoyYxIk">
+            <Image
+              src="/images/pasta.png"
+              layout="fill"
+              objectFit="contain"
+              alt="pasta"
+            />
+          </Link>
         ) : (
           <Image
             src="/images/me.png"
@@ -30,15 +33,14 @@ export default function Home() {
         )}
       </div>
       <div>
-        {imageHover ? (
-          <p>
-          &quot;Hello Bro&quot; - Sun Tzu
-          </p>
-        ) : (
+        <div className="text-center">
           <p>
           &quot;Welcome to my website&quot; - Thomas Li
-        </p>
-        )}
+          </p>
+          <p>
+            High school senior from Maryland interested in Mathematics, Computing, Skateboarding.
+          </p>
+        </div>
       </div>
     </div>
   );

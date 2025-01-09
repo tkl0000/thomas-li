@@ -6,7 +6,7 @@ export default function Blog() {
   const allPostsData: PostData[] = getSortedPostsData();
 
   return (
-    <div>
+    <div className="flex flex-col items-center">
       <ul>
         {allPostsData.map(({ slug, title, date }) => (
           <li key={slug}>
