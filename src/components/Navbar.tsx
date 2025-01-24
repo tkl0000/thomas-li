@@ -16,16 +16,16 @@ const Navbar = () => {
               blog
             </div>
           </Link> */}
-          {/* <Link href="/reading">
-            <div className="border-gray-900 hover:border-slate-50 px-4 py-2 rounded transition duration-300 ease-in-out">
-              reading
-            </div>
-          </Link> */}
           <Link href="/projects">
             <div className="border-gray-900 hover:border-slate-50 px-4 py-2 rounded transition duration-300 ease-in-out">
               projects
             </div>
           </Link>
+          {/* <Link href="/music">
+            <div className="border-gray-900 hover:border-slate-50 px-4 py-2 rounded transition duration-300 ease-in-out">
+              music
+            </div>
+          </Link> */}
         </div>
       </nav>
     </div>
