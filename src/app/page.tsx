@@ -8,40 +8,31 @@ export default function Home() {
   const [imageHover, setImageHover] = useState(false);
 
   return (
-    <div className="flex flex-col items-center gap-3">
-      <div
-        className="relative h-60 w-80"
-        onMouseEnter={() => setImageHover(true)}
-        onMouseLeave={() => setImageHover(false)}
-      >
-        {imageHover ? (
-          <Link href="https://www.youtube.com/watch?v=kgmEAoyYxIk">
-            <Image
-              src="/images/pasta.png"
-              layout="fill"
-              objectFit="contain"
-              alt="pasta"
-            />
-          </Link>
-        ) : (
+    <div className="flex flex-row gap-3 justify-between mx-10">
+      <div className="flex flex-col">
+        <p>Hello, I'm Thomas, welcome to my website!</p>
+        <p>I'm an incoming freshman at Carnegie Mellon University.</p>
+        <p>In my free time, I enjoy watching <a href="https://www.youtube.com/c/3blue1brown">3Blue1Brown</a> and <a href="google.com">skateboarding</a>.</p>
+      </div>
+      <div className="flex flex-col gap-5">
           <Image
             src="/images/me.png"
-            layout="fill"
-            objectFit="contain"
+            width={220}
+            height={100}
             alt="me"
           />
-        )}
-      </div>
-      <div>
-        <div className="text-center">
-          <p>
-          &quot;Welcome to my website&quot; - Thomas Li
-          </p>
-          <p>
-            High school senior from Maryland interested in Mathematics, Computing, Skateboarding.
-          </p>
-          { imageHover ? <p>Above: 1 Year Old Me vs Pasta</p> : <></>}
-        </div>
+          <Image
+            src="/images/pasta.png"
+            width={220}
+            height={100}
+            alt="pasta"
+          />
+          <Image
+            src="/images/juho.png"
+            width={220}
+            height={100}
+            alt="pasta"
+          />
       </div>
     </div>
   );
