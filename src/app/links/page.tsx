@@ -20,7 +20,13 @@ export default function Reading() {
                         <a href="https://karpathy.ai/zero-to-hero.html">Kaparthy's Zero-To-Hero</a>
                     </li>
                     <li>
-                        <a href="https://www.cs.cornell.edu/courses/cs4780/2024sp/">Cornell Machine Learning</a>
+                        <a href="https://www.cs.cornell.edu/courses/cs4780/2024sp/">Cornell Machine Learning CS4780</a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/playlist?list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU">Andrew Ng's Machine Learning Lectures</a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/playlist?list=PLoROMvodv4rOABXSygHTsbvUz4G_YQhOb">Andrew Ng's Deep Learning</a>
                     </li>
                 </ul>
             </div>
