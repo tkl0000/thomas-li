@@ -17,7 +17,7 @@ const defaultText: React.ReactNode = (
     <br></br>
     <p>I'm an incoming freshman at Carnegie Mellon University.</p>
     <br></br>
-    <p>In my free time, I enjoy watching <a href="https://www.youtube.com/c/3blue1brown">3Blue1Brown</a> and <a href="google.com">skateboarding</a>.</p>
+    <p>In my free time, I enjoy watching <a href="https://www.youtube.com/c/3blue1brown">3Blue1Brown</a> and <a href="https://youtu.be/r-bkrRGm4Bo?si=v0ldHDjmVlT72Ha8">skateboarding</a>.</p>
   </div>
 )
 
