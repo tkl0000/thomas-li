@@ -17,14 +17,16 @@ const descriptions: { [key: string]: React.ReactNode } = {
   //   <div>truth</div>,
   // "pasta":
   //   <div>pasta</div>,
-  "juho":
-    <div>juho bay</div>,
+  // "juho":
+  //   <div>juho bay</div>,
   "oceancity":
     <div>ocean city, md</div>,
   "stanford":
     <div>stanford, ca</div>,
   "hongkong":
     <div>hong kong</div>,
+  "beijing":
+    <div>beijing</div>,
 }
 
 // const defaultText: React.ReactNode = (
