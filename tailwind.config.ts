@@ -24,6 +24,7 @@ export default {
           'Arial',
           'sans-serif',
         ],
+        times: ["'Times New Roman'", 'Times', 'serif'],
       },
     },
   },
