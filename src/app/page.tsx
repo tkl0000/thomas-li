@@ -158,7 +158,7 @@ const Home = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
       className="flex flex-col lg:flex-row h-screen lg:gap-0 lg:justify-between">
-      <div className="flex flex-col items-center lg:items-start">
+      <div className="flex flex-col items-center lg:items-start lg:pl-10">
         {Title(imageHover, imageFocus, active)}
       </div>
       <div className="flex flex-col justify-center h-screen lg:flex-row lg:justify-end lg:flex-grow ">
