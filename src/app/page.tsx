@@ -1,7 +1,7 @@
 "use client";
 import Image from 'next/image';
 import { Dispatch, SetStateAction, useEffect, useRef, useState } from 'react';
-import { motion, AnimatePresence, easeOut, easeInOut } from 'framer-motion';
+import { motion, AnimatePresence, easeOut, easeInOut, easeIn } from 'framer-motion';
 // import { MathJaxContext, MathJax } from 'better-react-mathjax';
 // import Link from 'next/link';
 
@@ -205,7 +205,7 @@ const Home = () => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 1 }}
       className="flex flex-col lg:flex-row h-screen lg:gap-0 lg:justify-between">
       <div className="flex flex-col items-center lg:items-start lg:pl-10">
         {Title(imageHover, imageFocus, active)}
