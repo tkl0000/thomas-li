@@ -52,21 +52,31 @@ const iconLinks: { [key: string]: string} = {
   // </div>
 // ) */}
 
-const Icons = () => {
+const Socials = () => {
+  const [hover, setHover] = useState(false)
+
   return (
-      Object.keys(iconLinks).map((key, index) => (
-          <a href={`${iconLinks[key]}`} key={key}>
-            <Image
-              className="object-cover"
-              src={`/icons/${key}.png`}
-              width={25}
-              height={25}
-              alt={key}
-              data-index={index}
-            />
-          </a>
-      ))
-  );
+    <AnimatePresence mode="wait">
+      <motion.div
+        key={`${hover}`}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.2 }}
+        className="font-times flex cursor-pointer flex-grow "
+        onMouseEnter={() => {setHover(true)}}
+        onMouseLeave={() => {setHover(false)}}>
+          {hover ? 
+            <div>
+              <a href="mailto:thomaskl@cmu.edu">email</a> · <a href="https://x.com/kthomasli">x</a> · <a href="https://www.linkedin.com/in/thomas-li-3a887029a/">linkedin</a>
+            </div> : 
+            <div>
+              + + +
+            </div>
+          }
+      </motion.div> 
+    </AnimatePresence>
+  )
 }
 
 const Title = (imageHover: string, imageFocus: string, active: boolean) => {
@@ -77,10 +87,10 @@ const Title = (imageHover: string, imageFocus: string, active: boolean) => {
         thomas li
         {/* <a href="mailto:thomaskl@cmu.edu">thomas li</a> */}
       </div>
-      <div className="flex flex-row justify-end">
-        {/* <div className="flex flex-row gap-2">
-          {Icons()}
-        </div> */}
+      <div className="flex flex-row justify-between ">
+        <div className="flex flex-row gap-2 flex-grow">
+          {Socials()}
+        </div>
         <div className="lg:hidden">
           <AnimatePresence mode="wait">
             (<motion.div
