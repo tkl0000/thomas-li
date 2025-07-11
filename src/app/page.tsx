@@ -1,7 +1,7 @@
 "use client";
 import Image from 'next/image';
 import { Dispatch, SetStateAction, useEffect, useRef, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, easeOut, easeInOut } from 'framer-motion';
 // import { MathJaxContext, MathJax } from 'better-react-mathjax';
 // import Link from 'next/link';
 
@@ -32,7 +32,9 @@ const imageDescriptions: { [key: string]: React.ReactNode } = {
   "doublerainbow":
     <div>home</div>,
   "dc":
-    <div>washington dc</div>
+    <div>washington dc</div>,
+  "sf":
+    <div>san francisco</div>
 }
 
 const iconLinks: { [key: string]: string} = {
@@ -59,16 +61,16 @@ const Socials = () => {
     <AnimatePresence mode="wait">
       <motion.div
         key={`${hover}`}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 0.2 }}
+        initial={{ opacity: 0, transform: "translateX(10px)" }}
+        animate={{ opacity: 1, transform: "translateX(0px)" }}
+        exit={{ opacity: 0, transform: "translateX(-10px)" }}
+        transition={{ duration: 0.2, ease: easeOut }}
         className="font-times flex cursor-pointer flex-grow "
         onMouseEnter={() => {setHover(true)}}
         onMouseLeave={() => {setHover(false)}}>
           {hover ? 
             <div>
-              <a href="mailto:thomaskl@cmu.edu">email</a> · <a href="https://x.com/kthomasli">x</a> · <a href="https://www.linkedin.com/in/thomas-li-3a887029a/">linkedin</a>
+              <a target="_blank" href="mailto:thomaskl@cmu.edu">email</a> · <a target="_blank" href="https://x.com/kthomasli">x</a> · <a target="_blank" href="https://www.linkedin.com/in/thomas-li-3a887029a/">linkedin</a>
             </div> : 
             <div>
               + + +
@@ -95,10 +97,10 @@ const Title = (imageHover: string, imageFocus: string, active: boolean) => {
           <AnimatePresence mode="wait">
             (<motion.div
               key={`${imageFocus}-${active}`}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.2 }}
+              initial={{ opacity: 0, transform: "translateX(-10px)" }}
+              animate={{ opacity: 1, transform: "translateX(0px)" }}
+              exit={{ opacity: 0, transform: "translateX(10px)"}}
+              transition={{ duration: 0.2, ease: easeOut, }}
               className="font-times flex">
               {active === false ? defaultText : (imageDescriptions[imageFocus])}
             </motion.div> )
@@ -108,10 +110,10 @@ const Title = (imageHover: string, imageFocus: string, active: boolean) => {
           <AnimatePresence mode="wait">
             (<motion.div
               key={imageHover}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.2 }}
+              initial={{ opacity: 0, transform: "translateX(-10px)" }}
+              animate={{ opacity: 1, transform: "translateX(0px)" }}
+              exit={{ opacity: 0, transform: "translateX(10px)"}}
+              transition={{ duration: 0.2, ease: easeOut, }}
               className="font-times flex">
               {imageHover === "" ? defaultText : (imageDescriptions[imageHover])}
             </motion.div> )
