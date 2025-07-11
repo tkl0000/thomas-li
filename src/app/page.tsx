@@ -24,13 +24,15 @@ const descriptions: { [key: string]: React.ReactNode } = {
   "oceancity":
     <div>ocean city</div>,
   "hongkong":
-    <div>lantau island, hong kong</div>,
+    <div>hong kong</div>,
   "stanford":
-    <div>stanford sunrise</div>,
+    <div>stanford</div>,
   "beijing":
-    <div>the great wall of china</div>,
+    <div>beijing</div>,
   "doublerainbow":
-    <div>double rainbow</div>
+    <div>home</div>,
+  "dc":
+    <div>washington dc</div>
 }
 
 // const defaultText: React.ReactNode = (
