@@ -10,7 +10,7 @@ const mathjaxConfig = {
   tex: { packages: { '[+]': ['ams'] } },
 };
 
-const descriptions: { [key: string]: React.ReactNode } = {
+const imageDescriptions: { [key: string]: React.ReactNode } = {
   // "me":
   //   <div>This is a photo with the sun rising behind me.</div>,
   // "cb":
@@ -35,6 +35,13 @@ const descriptions: { [key: string]: React.ReactNode } = {
     <div>washington dc</div>
 }
 
+const iconLinks: { [key: string]: string} = {
+  "x": "",
+  "email": "",
+  "linkedin" : "",
+}
+
+
 // const defaultText: React.ReactNode = (
 //   <div>
 //     {/* <p>Hello, I'm Thomas, welcome to my website!</p>
@@ -45,44 +52,68 @@ const descriptions: { [key: string]: React.ReactNode } = {
   // </div>
 // ) */}
 
+const Icons = () => {
+  return (
+      Object.keys(iconLinks).map((key, index) => (
+          <a href={`${iconLinks[key]}`} key={key}>
+            <Image
+              className="object-cover"
+              src={`/icons/${key}.png`}
+              width={25}
+              height={25}
+              alt={key}
+              data-index={index}
+            />
+          </a>
+      ))
+  );
+}
+
 const Title = (imageHover: string, imageFocus: string, active: boolean) => {
   return (
-    <div className="font-times w-fit mt-20">
+    <div className="font-times w-fit mt-20 flex flex-col">
       {/* thomas 康毅 li */}
-      <div className="flex text-8xl lg:text-9xl hover:underline cursor-pointer"> 
-        <a href="mailto:thomaskl@cmu.edu">thomas li</a>
+      <div className="flex text-8xl lg:text-9xl"> 
+        thomas li
+        {/* <a href="mailto:thomaskl@cmu.edu">thomas li</a> */}
       </div>
-      <div className="lg:hidden">
-        <AnimatePresence mode="wait">
-          (<motion.div
-            key={`${imageFocus}-${active}`}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="font-times flex justify-end">
-            {active === false ? defaultText : (descriptions[imageFocus])}
-          </motion.div> )
-        </AnimatePresence>
-      </div>
-      <div className="hidden lg:block">
-        <AnimatePresence mode="wait">
-          (<motion.div
-            key={imageHover}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="font-times flex justify-end">
-            {imageHover === "" ? defaultText : (descriptions[imageHover])}
-          </motion.div> )
-        </AnimatePresence>
-      </div>
+      <div className="flex flex-row justify-end">
+        {/* <div className="flex flex-row gap-2">
+          {Icons()}
+        </div> */}
+        <div className="lg:hidden">
+          <AnimatePresence mode="wait">
+            (<motion.div
+              key={`${imageFocus}-${active}`}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="font-times flex">
+              {active === false ? defaultText : (imageDescriptions[imageFocus])}
+            </motion.div> )
+          </AnimatePresence>
+        </div>
+        <div className="hidden lg:block">
+          <AnimatePresence mode="wait">
+            (<motion.div
+              key={imageHover}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="font-times flex">
+              {imageHover === "" ? defaultText : (imageDescriptions[imageHover])}
+            </motion.div> )
+          </AnimatePresence>
+        </div>
     </div>
+   </div> 
   )
 }
 
 const defaultText = "CS @ Carnegie Mellon University"
+
 
 const Carousel = (setImageHover: Dispatch<SetStateAction<string>>, setImageFocus: Dispatch<SetStateAction<string>>, setActive: Dispatch<SetStateAction<boolean>>) => {
   const itemsRef = useRef<(HTMLDivElement | null)[]>([]);
@@ -112,7 +143,7 @@ const Carousel = (setImageHover: Dispatch<SetStateAction<string>>, setImageFocus
   }, [])
 
   return (
-      Object.keys(descriptions).map((key, index) => (
+      Object.keys(imageDescriptions).map((key, index) => (
           <Image
             src={`/images/${key}.png`}
             width={300}
