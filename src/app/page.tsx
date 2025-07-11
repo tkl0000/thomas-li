@@ -19,16 +19,18 @@ const descriptions: { [key: string]: React.ReactNode } = {
   //   <div>pasta</div>,
   // "juho":
   //   <div>juho bay</div>,
+  // "pennsylvania":
+  //   <div>pennsylvania</div>,
   "oceancity":
-    <div>ocean city, md</div>,
+    <div>ocean city</div>,
   "hongkong":
-    <div>hong kong</div>,
+    <div>lantau island, hong kong</div>,
   "stanford":
-    <div>stanford, ca</div>,
+    <div>stanford sunrise</div>,
   "beijing":
-    <div>beijing</div>,
-  "pennsylvania":
-    <div>pennsylvania</div>
+    <div>the great wall of china</div>,
+  "doublerainbow":
+    <div>double rainbow</div>
 }
 
 // const defaultText: React.ReactNode = (
@@ -166,7 +168,7 @@ const Home = () => {
       <div className="flex flex-col justify-center h-screen lg:flex-row lg:justify-end lg:flex-grow ">
         {/* {imageHover} */}
         {/* {imageFocus} */}
-        <div className="flex flex-row gap-5 overflow-x-auto lg:flex-col lg:overflow-y-auto lg:max-h-screen lg:mr-10 lg:mb-0 lg:w-full lg:items-end"
+        <div className="flex flex-row gap-5 overflow-x-auto mx-5 lg:mx-0 lg:my-5 lg:flex-col lg:overflow-y-auto lg:max-h-screen lg:mr-10 lg:w-full lg:items-end"
               ref={carouselRef}>
           {Carousel(setImageHover, setImageFocus, setActive)}
         </div> 
