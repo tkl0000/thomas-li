@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar';
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="bg-gray-800">
+      <body className="dark:bg-gray-800 dark:text-white bg-white text-gray-800">
           <main className="flex-1">
             {children}
           </main>

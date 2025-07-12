@@ -140,7 +140,7 @@ const Carousel = (setImageHover: Dispatch<SetStateAction<string>>, setImageFocus
           }
         });
       },
-      { root: null, threshold: 0.7 } // 50% visible = considered "focused"
+      { root: null, threshold: 0.7 } 
     );
 
     itemsRef.current.forEach(item => {
