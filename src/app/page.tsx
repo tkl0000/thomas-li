@@ -126,7 +126,6 @@ const Title = (imageHover: string, imageFocus: string, active: boolean) => {
 
 const defaultText = "CS @ Carnegie Mellon University"
 
-
 const Carousel = (setImageHover: Dispatch<SetStateAction<string>>, setImageFocus: Dispatch<SetStateAction<string>>, setActive: Dispatch<SetStateAction<boolean>>) => {
   const itemsRef = useRef<(HTMLDivElement | null)[]>([]);
 
@@ -180,7 +179,7 @@ const Carousel = (setImageHover: Dispatch<SetStateAction<string>>, setImageFocus
 const Home = () => {
 
   const [imageHover, setImageHover] = useState(""); // desktop
-  const [imageFocus, setImageFocus] = useState("Default Focus"); // mobile
+  const [imageFocus, setImageFocus] = useState(imageDescriptions[0]?.toString() || ""); // mobile
   const [active, setActive] = useState(false) // mobile
   const carouselRef = useRef<HTMLDivElement>(null);
 
