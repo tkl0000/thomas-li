@@ -212,7 +212,7 @@ const Home = () => {
       <div className="flex flex-col justify-center h-screen lg:flex-row lg:justify-end lg:flex-grow ">
         {/* {imageHover} */}
         {/* {imageFocus} */}
-        <div className="flex flex-row gap-5 overflow-x-auto mx-5 lg:mx-0 lg:my-5 lg:flex-col lg:overflow-y-auto lg:max-h-screen lg:mr-10 lg:w-full lg:items-end"
+        <div className="flex flex-row gap-5 overflow-x-auto mx-5 lg:mx-0 lg:my-5 lg:flex-col lg:overflow-y-auto lg:max-h-screen lg:mr-10 lg:w-full lg:items-end scrollbar-hide"
               ref={carouselRef}>
           {Carousel(setImageHover, setImageFocus, setActive)}
         </div> 
